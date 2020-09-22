@@ -24,9 +24,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jdbc</artifactId>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+	<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> 
 		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -70,15 +68,23 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-<!-- 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-test</artifactId> 
+			<scope>test</scope> </dependency> -->
 	</dependencies>
 
 	<build>
 		<plugins>
+
+	<plugin>
+		<groupId>com.heroku.sdk</groupId>
+		<artifactId>heroku-maven-plugin</artifactId>
+		<configuration>
+			<processTypes>
+				<web>java -jar /app/target/demo-0.0.1-SNAPSHOT.war</web>
+			</processTypes>
+		</configuration>
+		<version>3.0.3</version>
+	</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

@@ -126,4 +126,9 @@ public class HomeController {
 	public String hello() {
 		return "Hello";
 	}
+	
+	@GetMapping("/")
+	public String helloWorld() {
+		return "Hello World";
+	}
 }

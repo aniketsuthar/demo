@@ -128,7 +128,7 @@ public class HomeController {
 		return "Hello";
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/helloworld")
 	@ResponseBody
 	public String helloWorld() {
 		return "Hello World";

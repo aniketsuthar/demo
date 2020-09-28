@@ -133,4 +133,11 @@ public class HomeController {
 	public String helloWorld() {
 		return "Hello World";
 	}
+	
+	@GetMapping("/getmapping")
+	@ResponseBody
+	public String getmapping() {
+		return "Get World";
+	}
+	
 }

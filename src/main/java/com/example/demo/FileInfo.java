@@ -6,7 +6,6 @@ public class FileInfo {
 	private String result_directory;
 
 	
-	
 	public String getFile_path() {
 		return file_path;
 	}
